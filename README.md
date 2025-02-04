@@ -11,11 +11,11 @@ This will be the frontend implementation used to test the functions of the [Inve
    1. Open your terminal or command prompt.
    2. Clone the repository using the following command:
       ```
-      git clone https://github.com/Ivan-Lazz/ims.fin
+      git clone https://github.com/Ivan-Lazz/test_ims
       ```
    3. Once cloned, navigate to the project directory:
       ```
-      cd imsfin
+      cd test_ims
       ```
 2. ### Move Folders to XAMPP's htdocs
    1. Locate your XAMPP installation folder. The default path is typically:

@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadCompanies() {
     showSpinner();
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/company/get_companies.php');
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/company/get_companies.php');
         const result = await response.json();
         
         if (!result.data) {
@@ -277,7 +277,7 @@ async function loadCompanies() {
 async function loadProducts(company_name) {
     showSpinner();
     try {
-        const response = await fetch(`http://localhost/imsfin/IMS_API/api/product/get_products_by_company.php?company_name=${encodeURIComponent(company_name)}`);
+        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/product/get_products_by_company.php?company_name=${encodeURIComponent(company_name)}`);
         const result = await response.json();
         
         if (!result.success) {
@@ -306,7 +306,7 @@ async function loadProducts(company_name) {
 async function loadUnits(product_name, company_name) {
     showSpinner();
     try {
-        const response = await fetch(`http://localhost/imsfin/IMS_API/api/unit/get_units_by_product.php?product_name=${encodeURIComponent(product_name)}&company_name=${encodeURIComponent(company_name)}`);
+        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/unit/get_units_by_product.php?product_name=${encodeURIComponent(product_name)}&company_name=${encodeURIComponent(company_name)}`);
         const result = await response.json();
         
         if (!result.success) {
@@ -336,7 +336,7 @@ async function loadPackingSizes(unit, product_name, company_name) {
     showSpinner();
     try {
         const response = await fetch(
-            `http://localhost/imsfin/IMS_API/api/product/get_packing_sizes.php?unit=${encodeURIComponent(unit)}&product_name=${encodeURIComponent(product_name)}&company_name=${encodeURIComponent(company_name)}`
+            `http://localhost/StockSyncz/IMS_API/api/product/get_packing_sizes.php?unit=${encodeURIComponent(unit)}&product_name=${encodeURIComponent(product_name)}&company_name=${encodeURIComponent(company_name)}`
         );
         const result = await response.json();
         
@@ -372,7 +372,7 @@ async function loadPrice() {
         const packing_size = document.getElementById('packing_size').value;
 
         const response = await fetch(
-            `http://localhost/imsfin/IMS_API/api/product/get_product_price.php?company_name=${encodeURIComponent(company_name)}&product_name=${encodeURIComponent(product_name)}&unit=${encodeURIComponent(unit)}&packing_size=${encodeURIComponent(packing_size)}`
+            `http://localhost/StockSyncz/IMS_API/api/product/get_product_price.php?company_name=${encodeURIComponent(company_name)}&product_name=${encodeURIComponent(product_name)}&unit=${encodeURIComponent(unit)}&packing_size=${encodeURIComponent(packing_size)}`
         );
         const result = await response.json();
         
@@ -424,7 +424,7 @@ async function addToCart() {
         }
 
         // Make API request
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/sales/cart/add_to_cart.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/cart/add_to_cart.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -462,7 +462,7 @@ function resetFields(fields) {
 // Load cart items
 async function loadCart() {
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/sales/cart/get_cart_items.php');
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/cart/get_cart_items.php');
         const result = await response.json();
         
         if (!result.success) {
@@ -473,7 +473,7 @@ async function loadCart() {
         document.getElementById('cartItems').innerHTML = cartHtml;
         
         // Load cart total
-        const totalResponse = await fetch('http://localhost/imsfin/IMS_API/api/sales/cart/get_cart_total.php');
+        const totalResponse = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/cart/get_cart_total.php');
         const totalResult = await totalResponse.json();
         
         if (!totalResult.success) {
@@ -550,7 +550,7 @@ async function updateCartItem(sessionId, qty) {
             throw new Error('Quantity must be greater than 0');
         }
 
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/sales/cart/update_cart_item.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/cart/update_cart_item.php', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -585,7 +585,7 @@ async function deleteCartItem(sessionId) {
 
     showSpinner();
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/sales/cart/delete_cart_item.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/cart/delete_cart_item.php', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -636,7 +636,7 @@ async function generateBill() {
         submitButton.disabled = true;
         showSpinner();
 
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/sales/bills/create_bill.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/bills/create_bill.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

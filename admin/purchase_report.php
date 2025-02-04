@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadPurchases(useFilters = false) {
     showSpinner();
     try {
-        let url = new URL('http://localhost/imsfin/IMS_API/api/reports/get_purchase_report.php', window.location.origin);
+        let url = new URL('http://localhost/StockSyncz/IMS_API/api/reports/get_purchase_report.php', window.location.origin);
         url.searchParams.append('page', currentPage);
         url.searchParams.append('limit', recordsPerPage);
         

@@ -58,7 +58,7 @@ $id = $_GET['id'];
 // Load company data
 async function loadCompanyData() {
     try {
-        const response = await fetch(`http://localhost/imsfin/IMS_API/api/company/read_single_company.php?id=<?php echo $id; ?>`);
+        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/company/read_single_company.php?id=<?php echo $id; ?>`);
         const data = await response.json();
         
         if (data.status === 200 && data.data) {
@@ -94,7 +94,7 @@ document.getElementById('editCompanyForm').addEventListener('submit', async func
     }
     
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/company/update_company.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/company/update_company.php', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

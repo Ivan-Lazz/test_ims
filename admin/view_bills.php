@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadBills(useFilters = false) {
     showSpinner();
     try {
-        let url = new URL('http://localhost/imsfin/IMS_API/api/sales/bills/get_bills.php', window.location.href);
+        let url = new URL('http://localhost/StockSyncz/IMS_API/api/sales/bills/get_bills.php', window.location.href);
         url.searchParams.append('page', currentPage);
         url.searchParams.append('limit', recordsPerPage);
         

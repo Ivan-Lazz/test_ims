@@ -88,7 +88,7 @@ $id = $_GET['id'];
 // Load party data
 async function loadPartyData() {
     try {
-        const response = await fetch(`http://localhost/imsfin/IMS_API/api/party/read_single_party.php?id=<?php echo $id; ?>`);
+        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/party/read_single_party.php?id=<?php echo $id; ?>`);
         const data = await response.json();
         
         if (data.status === 200 && data.data) {
@@ -124,7 +124,7 @@ document.getElementById('editPartyForm').addEventListener('submit', async functi
     formData.forEach((value, key) => partyData[key] = value.trim());
     
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/party/update_party.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/party/update_party.php', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

@@ -195,7 +195,7 @@ async function loadParties() {
     spinner.style.display = 'block';
     
     try {
-        const url = `http://localhost/imsfin/IMS_API/api/party/read_parties.php?page=${currentPage}&per_page=${recordsPerPage}`;
+        const url = `http://localhost/StockSyncz/IMS_API/api/party/read_parties.php?page=${currentPage}&per_page=${recordsPerPage}`;
         console.log('Fetching from URL:', url);
         
         const response = await fetch(url);
@@ -318,7 +318,7 @@ async function deleteParty(id) {
     }
 
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/party/delete_party.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/party/delete_party.php', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -350,7 +350,7 @@ document.getElementById('addPartyForm').addEventListener('submit', async functio
     formData.forEach((value, key) => partyData[key] = value.trim());
     
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/party/create_party.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/party/create_party.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

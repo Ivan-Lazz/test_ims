@@ -87,7 +87,7 @@ async function loadDashboardStats() {
     document.getElementById('companiesCount').innerHTML = '<span class="loading-spinner"></span>';
 
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/dashboard/get_dashboard_admin.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/dashboard/get_dashboard_admin.php', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

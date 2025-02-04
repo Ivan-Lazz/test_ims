@@ -106,7 +106,7 @@ async function loadStockDetails() {
     console.log('Loading stock details for ID:', stockId);
 
     try {
-        const response = await fetch(`http://localhost/imsfin/IMS_API/api/stock/get_stock_detail.php?id=${stockId}`);
+        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/stock/get_stock_detail.php?id=${stockId}`);
         const result = await response.json();
         console.log('API Response:', result);
         
@@ -153,7 +153,7 @@ async function updateStockPrice() {
             throw new Error('Please enter a valid positive price');
         }
 
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/stock/update_stock_price.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/stock/update_stock_price.php', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

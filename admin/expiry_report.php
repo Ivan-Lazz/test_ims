@@ -130,7 +130,7 @@ async function loadReport() {
             throw new Error('Start date cannot be later than end date');
         }
 
-        const url = new URL('http://localhost/imsfin/IMS_API/api/reports/get_expiry_report.php', window.location.origin);
+        const url = new URL('http://localhost/StockSyncz/IMS_API/api/reports/get_expiry_report.php', window.location.origin);
         url.searchParams.append('page', currentPage);
         url.searchParams.append('limit', recordsPerPage);
         url.searchParams.append('start_date', startDate);

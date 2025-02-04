@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadBillDetails() {
     showSpinner();
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/sales/bills/get_bill_details.php?id=<?php echo $id; ?>');
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/bills/get_bill_details.php?id=<?php echo $id; ?>');
         const result = await response.json();
 
         if (!result.success) {
@@ -74,7 +74,7 @@ async function processReturn(id) {
     hideMessages();
 
     try {
-        const response = await fetch('http://localhost/imsfin/IMS_API/api/sales/return/process_return.php', {
+        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/return/process_return.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

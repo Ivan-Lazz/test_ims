@@ -1,0 +1,278 @@
+Folder PATH listing for volume OS
+Volume serial number is ECBB-05C2
+C:.
+|   add_new_company.php
+|   add_new_party.php
+|   add_new_unit.php
+|   add_new_user.php
+|   add_product.php
+|   dashboard.php
+|   edit_company.php
+|   edit_party.php
+|   edit_product.php
+|   edit_stock_master.php
+|   edit_unit.php
+|   edit_user.php
+|   expiry_report.php
+|   footer.php
+|   header.php
+|   ims-struct.txt
+|   index.php
+|   logout.php
+|   party_report_list.php
+|   purchase_master.php
+|   purchase_report.php
+|   return_product_list.php
+|   sales_master.php
+|   stock_master.php
+|   view_bills.php
+|   view_bills_details.php
+|   
++---api
+|   +---auth
+|   |       authenticate.php
+|   |       
+|   +---company
+|   |       create_company.php
+|   |       delete_company.php
+|   |       get_companies.php
+|   |       read_companies.php
+|   |       read_single_company.php
+|   |       update_company.php
+|   |       
+|   +---dashboard
+|   |       get_dashboard_stats.php
+|   |       
+|   +---party
+|   |       create_party.php
+|   |       delete_party.php
+|   |       get_parties.php
+|   |       read_parties.php
+|   |       read_single_party.php
+|   |       update_party.php
+|   |       
+|   +---product
+|   |       create_product.php
+|   |       delete_product.php
+|   |       get_products_by_company.php
+|   |       get_product_price.php
+|   |       read_products.php
+|   |       read_single_product.php
+|   |       update_product.php
+|   |       
+|   +---reports
+|   |       get_expiry_report.php
+|   |       get_party_report.php
+|   |       get_purchase_report.php
+|   |       get_return_report.php
+|   |       
+|   +---sales
+|   |   |   create_purchase.php
+|   |   |   
+|   |   +---bills
+|   |   |       create_bill.php
+|   |   |       get_bills.php
+|   |   |       get_bill_details.php
+|   |   |       
+|   |   +---cart
+|   |   |       add_to_cart.php
+|   |   |       delete_cart_item.php
+|   |   |       get_cart_items.php
+|   |   |       get_cart_total.php
+|   |   |       update_cart_item.php
+|   |   |       
+|   |   \---return
+|   |           process_return.php
+|   |           
+|   +---stock
+|   |       get_stock.php
+|   |       get_stock_detail.php
+|   |       update_stock_price.php
+|   |       
+|   +---unit
+|   |       create_unit.php
+|   |       delete_unit.php
+|   |       get_packing_sizes.php
+|   |       get_units.php
+|   |       get_units_by_product.php
+|   |       read_single_unit.php
+|   |       read_units.php
+|   |       update_unit.php
+|   |       
+|   \---user
+|           create_user.php
+|           delete_user.php
+|           read_single_user.php
+|           read_users.php
+|           update_user.php
+|           
++---config
+|       database.php
+|       
++---css
+|       bootstrap-responsive.min.css
+|       bootstrap-wysihtml5.css
+|       bootstrap.min.css
+|       colorpicker.css
+|       datepicker.css
+|       font-awesome.css
+|       fullcalendar.css
+|       jquery.easy-pie-chart.css
+|       jquery.gritter.css
+|       matrix-login.css
+|       matrix-media.css
+|       matrix-style.css
+|       select2.css
+|       uniform.css
+|       
++---datepicker
+|       jquery-ui.js
+|       
++---font-awesome
+|   |   fontawesome-webfont.eot
+|   |   fontawesome-webfont.svg
+|   |   fontawesome-webfont.ttf
+|   |   fontawesome-webfont.woff
+|   |   FontAwesome.otf
+|   |   
+|   +---css
+|   |       font-awesome.css
+|   |       
+|   \---font
+|           fontawesome-webfont.eot
+|           fontawesome-webfont.svg
+|           fontawesome-webfont.ttf
+|           fontawesome-webfont.woff
+|           FontAwesome.otf
+|           
++---img
+|   |   breadcrumb.png
+|   |   glyphicons-halflings-white.png
+|   |   gritter.png
+|   |   hue.png
+|   |   larrow.png
+|   |   line.png
+|   |   logo.png
+|   |   menu-active.png
+|   |   rarrow.png
+|   |   saturation.png
+|   |   select2.png
+|   |   spinner.gif
+|   |   sprite.png
+|   |   Thumbs.db
+|   |   
+|   +---demo
+|   |       av1.jpg
+|   |       av2.jpg
+|   |       av3.jpg
+|   |       av4.jpg
+|   |       av5.jpg
+|   |       demo-image1.jpg
+|   |       demo-image2.jpg
+|   |       demo-image3.jpg
+|   |       envelope.png
+|   |       Thumbs.db
+|   |       
+|   +---gallery
+|   |       imgbox1.jpg
+|   |       imgbox2.jpg
+|   |       imgbox3.jpg
+|   |       imgbox4.jpg
+|   |       imgbox5.jpg
+|   |       
+|   \---icons
+|       +---16
+|       |       book.png
+|       |       cabinet.png
+|       |       calendar.png
+|       |       client.png
+|       |       database.png
+|       |       download.png
+|       |       graph.png
+|       |       home.png
+|       |       lock.png
+|       |       mail.png
+|       |       pdf.png
+|       |       people.png
+|       |       piechart.png
+|       |       search.png
+|       |       shopping-bag.png
+|       |       survey.png
+|       |       tag.png
+|       |       user.png
+|       |       wallet.png
+|       |       web.png
+|       |       
+|       \---32
+|               book.png
+|               cabinet.png
+|               calendar.png
+|               client.png
+|               dashboard.png
+|               database.png
+|               download.png
+|               graph.png
+|               home.png
+|               lock.png
+|               mail.png
+|               pdf.png
+|               people.png
+|               piechart.png
+|               search.png
+|               shopping-bag.png
+|               survey.png
+|               tag.png
+|               Thumbs.db
+|               user.png
+|               wallet.png
+|               web.png
+|               
++---js
+|       bootstrap-colorpicker.js
+|       bootstrap-datepicker.js
+|       bootstrap-wysihtml5.js
+|       bootstrap.js
+|       bootstrap.min.js
+|       excanvas.min.js
+|       fullcalendar.min.js
+|       jquery.dataTables.min.js
+|       jquery.easy-pie-chart.js
+|       jquery.flot.crosshair.js
+|       jquery.flot.min.js
+|       jquery.flot.pie.js
+|       jquery.flot.pie.min.js
+|       jquery.flot.resize.min.js
+|       jquery.flot.stack.js
+|       jquery.gritter.min.js
+|       jquery.min.js
+|       jquery.peity.min.js
+|       jquery.ui.custom.js
+|       jquery.uniform.js
+|       jquery.validate.js
+|       jquery.wizard.js
+|       masked.js
+|       matrix.calendar.js
+|       matrix.charts.js
+|       matrix.chat.js
+|       matrix.dashboard.js
+|       matrix.form_common.js
+|       matrix.form_validation.js
+|       matrix.interface.js
+|       matrix.js
+|       matrix.login.js
+|       matrix.popover.js
+|       matrix.tables.js
+|       matrix.wizard.js
+|       select2.min.js
+|       wysihtml5-0.3.0.js
+|       
+\---models
+        Company.php
+        Party.php
+        Product.php
+        Purchase.php
+        PurchaseReport.php
+        Sales.php
+        Unit.php
+        User.php
+        

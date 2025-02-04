@@ -98,7 +98,7 @@ const recordsPerPage = 10;
 // Load companies for dropdown
 async function loadCompanies() {
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/company/get_companies.php');
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/company/get_companies.php');
         const data = await response.json();
         console.log('Companies API Response:', data); // Debug log
 
@@ -124,7 +124,7 @@ async function loadCompanies() {
 // Load units for dropdown
 async function loadUnits() {
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/unit/get_units.php');
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/unit/get_units.php');
         const data = await response.json();
         console.log('Units API Response:', data); // Debug log
 
@@ -150,7 +150,7 @@ async function loadUnits() {
 // Load products
 async function loadProducts() {
     try {
-        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/product/read_products.php?page=${currentPage}&per_page=${recordsPerPage}`);
+        const response = await fetch(`http://localhost/imsfin/IMS_API/api/product/read_products.php?page=${currentPage}&per_page=${recordsPerPage}`);
         const data = await response.json();
         console.log('API Response:', data); // Debug log
         
@@ -260,7 +260,7 @@ async function deleteProduct(id) {
     }
 
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/product/delete_product.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/product/delete_product.php', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -292,7 +292,7 @@ document.getElementById('addProductForm').addEventListener('submit', async funct
     formData.forEach((value, key) => productData[key] = value.trim());
     
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/product/create_product.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/product/create_product.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

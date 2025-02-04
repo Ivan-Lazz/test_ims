@@ -109,7 +109,7 @@ const recordsPerPage = 10;
 // Function to load users
 async function loadUsers() {
     try {
-        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/user/read_users.php?page=${currentPage}&per_page=${recordsPerPage}`);
+        const response = await fetch(`http://localhost/imsfin/IMS_API/api/user/read_users.php?page=${currentPage}&per_page=${recordsPerPage}`);
         const data = await response.json();
         
         const tbody = document.getElementById('userTableBody');
@@ -207,7 +207,7 @@ async function deleteUser(id) {
     }
 
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/user/delete_user.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/user/delete_user.php', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -238,7 +238,7 @@ document.getElementById('addUserForm').addEventListener('submit', async function
     formData.forEach((value, key) => userData[key] = value);
     
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/user/create_user.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/user/create_user.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

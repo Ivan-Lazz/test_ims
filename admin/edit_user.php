@@ -104,7 +104,7 @@ function showError(message) {
 // Load user data
 async function loadUserData() {
     try {
-        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/user/read_single_user.php?id=<?php echo $id; ?>`);
+        const response = await fetch(`http://localhost/imsfin/IMS_API/api/user/read_single_user.php?id=<?php echo $id; ?>`);
         const result = await response.json();
         
         if (result.success && result.status_code === 200 && result.data) {
@@ -158,7 +158,7 @@ document.getElementById('editUserForm').addEventListener('submit', async functio
             userData.password = password;
         }
         
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/user/update_user.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/user/update_user.php', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

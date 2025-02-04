@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         try {
-            const response = await fetch('http://localhost/StockSyncz/IMS_API/api/sales/create_purchase.php', {
+            const response = await fetch('http://localhost/imsfin/IMS_API/api/sales/create_purchase.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadInitialData() {
     try {
         // Load companies
-        const companyResponse = await fetch('http://localhost/StockSyncz/IMS_API/api/company/get_companies.php');
+        const companyResponse = await fetch('http://localhost/imsfin/IMS_API/api/company/get_companies.php');
         const companiesData = await companyResponse.json();
         
         if (companiesData.status === 200 && companiesData.data) {
@@ -201,7 +201,7 @@ async function loadInitialData() {
         }
 
         // Load parties
-        const partyResponse = await fetch('http://localhost/StockSyncz/IMS_API/api/party/get_parties.php');
+        const partyResponse = await fetch('http://localhost/imsfin/IMS_API/api/party/get_parties.php');
         const partiesData = await partyResponse.json();
         
         if (partiesData.status === 200 && partiesData.data) {
@@ -218,7 +218,7 @@ async function loadInitialData() {
 // Load products for selected company
 async function loadProducts(company_name) {
     try {
-        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/product/get_products_by_company.php?company_name=${encodeURIComponent(company_name)}`);
+        const response = await fetch(`http://localhost/imsfin/IMS_API/api/product/get_products_by_company.php?company_name=${encodeURIComponent(company_name)}`);
         const data = await response.json();
         
         if (data.status === 200 && data.success && data.data) {
@@ -237,7 +237,7 @@ async function loadProducts(company_name) {
 async function loadUnits(product_name, company_name) {
     try {
         const response = await fetch(
-            `http://localhost/StockSyncz/IMS_API/api/unit/get_units_by_product.php?product_name=${encodeURIComponent(product_name)}&company_name=${encodeURIComponent(company_name)}`
+            `http://localhost/imsfin/IMS_API/api/unit/get_units_by_product.php?product_name=${encodeURIComponent(product_name)}&company_name=${encodeURIComponent(company_name)}`
         );
         const data = await response.json();
         
@@ -257,7 +257,7 @@ async function loadUnits(product_name, company_name) {
 async function loadPackingSizes(unit, product_name, company_name) {
     try {
         const response = await fetch(
-            `http://localhost/StockSyncz/IMS_API/api/product/get_packing_sizes.php?unit=${encodeURIComponent(unit)}&product_name=${encodeURIComponent(product_name)}&company_name=${encodeURIComponent(company_name)}`
+            `http://localhost/imsfin/IMS_API/api/product/get_packing_sizes.php?unit=${encodeURIComponent(unit)}&product_name=${encodeURIComponent(product_name)}&company_name=${encodeURIComponent(company_name)}`
         );
         const data = await response.json();
         

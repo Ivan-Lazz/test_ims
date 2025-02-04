@@ -163,7 +163,7 @@ async function loadUnits() {
     spinner.style.display = 'block';
     
     try {
-        const url = `http://localhost/StockSyncz/IMS_API/api/unit/read_units.php?page=${currentPage}&per_page=${recordsPerPage}`;
+        const url = `http://localhost/imsfin/IMS_API/api/unit/read_units.php?page=${currentPage}&per_page=${recordsPerPage}`;
         console.log('Fetching from URL:', url);
         
         const response = await fetch(url);
@@ -280,7 +280,7 @@ async function deleteUnit(id) {
     }
 
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/unit/delete_unit.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/unit/delete_unit.php', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -317,7 +317,7 @@ document.getElementById('addUnitForm').addEventListener('submit', async function
     }
     
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/unit/create_unit.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/unit/create_unit.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

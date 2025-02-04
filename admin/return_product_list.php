@@ -84,7 +84,7 @@ async function loadReport(useFilters = false) {
     hideError();
     
     try {
-        let url = 'http://localhost/StockSyncz/IMS_API/api/reports/get_return_report.php';
+        let url = 'http://localhost/imsfin/IMS_API/api/reports/get_return_report.php';
         url += `?page=${currentPage}&per_page=${recordsPerPage}`;
         
         if (useFilters) {

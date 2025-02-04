@@ -1,6 +1,6 @@
 # Inventory Management System Application Testing
 ### Introduction
-This will be the frontend implementation used to test the functions of the [Inventory Management API](https://github.com/Ivan-Lazz/StockSyncz.git) in this repository: ``` https://github.com/Ivan-Lazz/StockSyncz.git ```
+This will be the frontend implementation used to test the functions of the [Inventory Management API](https://github.com/Ivan-Lazz/imsfin.git) in this repository: ``` https://github.com/Ivan-Lazz/imsfin.git ```
 
 ## Prerequisites
 1. **XAMPP** (PHP and MySQL environment)

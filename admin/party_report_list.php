@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadParties() {
     showSpinner();
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/reports/get_party_report.php');
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/reports/get_party_report.php');
         const result = await response.json();
         
         if (result.status !== 200 || !result.success) {
@@ -128,7 +128,7 @@ async function loadReport(useFilters = false) {
 
     showSpinner();
     try {
-        const url = new URL('http://localhost/StockSyncz/IMS_API/api/reports/get_party_report.php', window.location.origin);
+        const url = new URL('http://localhost/imsfin/IMS_API/api/reports/get_party_report.php', window.location.origin);
         url.searchParams.append('party_name', currentParty);
         url.searchParams.append('page', currentPage);
         url.searchParams.append('limit', recordsPerPage);

@@ -110,7 +110,7 @@ function showErrorMessage(message) {
 // Load companies for dropdown
 async function loadCompanies() {
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/company/get_companies.php');
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/company/get_companies.php');
         const data = await response.json();
         console.log('Companies API Response:', data);
 
@@ -138,7 +138,7 @@ async function loadCompanies() {
 // Load units for dropdown
 async function loadUnits() {
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/unit/get_units.php');
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/unit/get_units.php');
         const data = await response.json();
         console.log('Units API Response:', data);
 
@@ -166,7 +166,7 @@ async function loadUnits() {
 async function loadProductData() {
     try {
         const productId = <?php echo json_encode($id); ?>;
-        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/product/read_single_product.php?id=${productId}`);
+        const response = await fetch(`http://localhost/imsfin/IMS_API/api/product/read_single_product.php?id=${productId}`);
         const data = await response.json();
         console.log('Product API Response:', data);
 
@@ -194,7 +194,7 @@ document.getElementById('editProductForm').addEventListener('submit', async func
     formData.forEach((value, key) => productData[key] = value.trim());
     
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/product/update_product.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/product/update_product.php', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

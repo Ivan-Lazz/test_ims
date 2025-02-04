@@ -101,7 +101,7 @@ async function loadStockData() {
     hideError();
     
     try {
-        let url = new URL('http://localhost/StockSyncz/IMS_API/api/stock/get_stock.php', window.location.origin);
+        let url = new URL('http://localhost/imsfin/IMS_API/api/stock/get_stock.php', window.location.origin);
         url.searchParams.append('page', currentPage);
         url.searchParams.append('limit', recordsPerPage);
         

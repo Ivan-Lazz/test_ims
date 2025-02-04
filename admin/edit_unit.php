@@ -87,7 +87,7 @@ function escapeHtml(unsafe) {
 // Load unit data
 async function loadUnitData() {
     try {
-        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/unit/read_single_unit.php?id=<?php echo $id; ?>`);
+        const response = await fetch(`http://localhost/imsfin/IMS_API/api/unit/read_single_unit.php?id=<?php echo $id; ?>`);
         const data = await response.json();
         
         // Check for successful response
@@ -124,7 +124,7 @@ document.getElementById('editUnitForm').addEventListener('submit', async functio
     };
     
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/unit/update_unit.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/unit/update_unit.php', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

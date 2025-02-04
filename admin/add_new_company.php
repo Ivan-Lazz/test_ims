@@ -169,7 +169,7 @@ async function loadCompanies() {
     spinner.style.display = 'block';
     
     try {
-        const response = await fetch(`http://localhost/StockSyncz/IMS_API/api/company/read_companies.php?page=${currentPage}&per_page=${recordsPerPage}`);
+        const response = await fetch(`http://localhost/imsfin/IMS_API/api/company/read_companies.php?page=${currentPage}&per_page=${recordsPerPage}`);
         const data = await response.json();
         
         const tbody = document.getElementById('companyTableBody');
@@ -261,7 +261,7 @@ async function deleteCompany(id) {
     }
 
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/company/delete_company.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/company/delete_company.php', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -299,7 +299,7 @@ document.getElementById('addCompanyForm').addEventListener('submit', async funct
     }
 
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/company/create_company.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/company/create_company.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -51,7 +51,7 @@ async function handleLogin(event) {
     const password = document.getElementById('password').value;
     
     try {
-        const response = await fetch('http://localhost/StockSyncz/IMS_API/api/auth/user_auth.php', {
+        const response = await fetch('http://localhost/imsfin/IMS_API/api/auth/user_auth.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

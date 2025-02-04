@@ -27,4 +27,15 @@ This will be the frontend implementation used to test the functions of the [Inve
    - If the website or Inventory Management doesn’t load, ensure that:
      - Apache and MySQL are running in XAMPP.
      - The folders are placed correctly in htdocs.
-       
+
+## Admin and User Account
+   - To login the admin account, enter the following details:
+      ```
+       username : admin
+       password : admin
+      ```
+   - To login the user account, enter the following details:
+      ```
+       username : lala
+       password : lala
+      ```

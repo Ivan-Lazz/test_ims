@@ -28,7 +28,7 @@ This will be the frontend implementation used to test the functions of the [Inve
      - Apache and MySQL are running in XAMPP.
      - The folders are placed correctly in htdocs.
 
-## Admin and User Account
+## Admin and User Account for Testing
    - To login the admin account, enter the following details:
       ```
        username : admin
